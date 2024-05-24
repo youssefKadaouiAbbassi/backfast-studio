@@ -1,0 +1,10 @@
+services:
+  nestui-frontend:
+    build:
+      context: ../..
+      dockerfile: docker/production/Dockerfile
+    ports:
+      - "4000:3000"
+    environment:
+      NODE_ENV: "production"
+    command: ["npm", "start"]
