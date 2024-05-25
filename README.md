@@ -1,65 +1,58 @@
-<h1 align="center">Next.js Starter Kit</h1>
+
+<h1 align="center">NestUI Frontend</h1>
 
 ## Overview
-**Next.js Starter Kit** is a comprehensive toolkit for building efficient web applications. It leverages the power of Next.js for frontend development.
+**NestUI Frontend** is the repository for the Docker configuration of the frontend of NestUI. 
 
-## Features
-- **[Next.js](https://nextjs.org/docs)**: A React framework ready for production.
-- **[Tailwind CSS](https://tailwindcss.com/)**: For efficient UI development.
-- **[Husky](https://github.com/typicode/husky)**: Maintaining code quality with Git hooks.
-- **[ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)**: Ensuring code style consistency.
-- **[Lint-staged](https://github.com/lint-staged/lint-staged)**: Run linters against staged git files and don't let 💩 slip into your code base.
+
+## Prerequisites
+- [Docker](https://www.docker.com/) should be installed on your system.
 
 ## Installation
-
-### Prerequisites
-- [Bun](https://bun.sh/) should be installed on your system.
-- [Docker](https://www.docker.com/) should be installed on your system.
 
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone git@github.com:youssefKadaouiAbbassi/next-template.git
+   git clone git@github.com:youssefKadaouiAbbassi/nestui-frontend.git
    ```
 2. Change to the project directory:
    ```bash
-   cd next-template
-   ```
-3. Install dependencies:
-   ```bash
-   bun install
+   cd nestui-frontend
    ```
 
 ## Development Setup
 
-### Running the Development Server
+### Building the Development Docker Image
 ```bash
-bun run dev
+make build-dev
+```
+
+### Starting the Development Docker Container
+```bash
+make start-dev
+```
+
+### Stopping the Development Docker Container
+```bash
+make stop-dev
 ```
 
 ## Production Setup
 
-### Building for Production
+### Building the Production Docker Image
 ```bash
-bun run build
+make build-prod
 ```
 
-### Starting the Production Server
+### Starting the Production Docker Container
 ```bash
-bun run start
+make start-prod
 ```
 
-## Deployment
-
-### Deploying to Vercel
-
-1. **Vercel Setup**
-   - Create or log in to your [Vercel account](https://vercel.com/).
-   - Connect your GitHub repository to Vercel.
-   - Configure project settings, including setting necessary environment variables.
-
-2. **Application Deployment**
-   - Deploy your application through Vercel, which will automatically build and host your Next.js application, integrating with GitHub for CI/CD processes.
+### Stopping the Production Docker Container
+```bash
+make stop-prod
+```
 
 ## Contributing
 Contributions are welcome! Please read our [Contributing Guidelines](link-to-guidelines) for more information.
