@@ -1,5 +1,5 @@
 services:
-  nestui-frontend-dev:
+  nestui-studio-dev:
     build:
       context: ../..
       dockerfile: docker/development/Dockerfile

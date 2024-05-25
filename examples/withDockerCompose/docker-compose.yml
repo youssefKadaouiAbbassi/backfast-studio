@@ -1,6 +1,6 @@
 services:
-  nestui-frontend-example:
-    image: youssefkadaouiabbassi/nestui-frontend:${TAG}
+  nestui-studio-example:
+    image: youssefkadaouiabbassi/nestui-studio:${TAG}
     ports:
       - "4000:3000"
     environment:

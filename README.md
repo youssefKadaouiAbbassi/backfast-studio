@@ -1,8 +1,8 @@
 
-<h1 align="center">NestUI Frontend</h1>
+<h1 align="center">NestUI Studio</h1>
 
 ## Overview
-**NestUI Frontend** is the repository for the Docker configuration of the frontend of NestUI. 
+**NestUI Studio** is the repository for the Docker configuration of the of NestUI Studio. 
 
 
 ## Prerequisites
@@ -13,11 +13,11 @@
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone git@github.com:youssefKadaouiAbbassi/nestui-frontend.git
+   git clone git@github.com:youssefKadaouiAbbassi/nestui-studio.git
    ```
 2. Change to the project directory:
    ```bash
-   cd nestui-frontend
+   cd nestui-studio
    ```
 
 ## Development Setup
