@@ -7,4 +7,5 @@ services:
       - "4000:3000"
     environment:
       NODE_ENV: "production"
+      NEXT_TELEMETRY_DISABLED: "1"
     command: ["npm", "start"]

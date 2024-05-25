@@ -16,16 +16,6 @@ COPY package.json package-lock.json ./
 # Install all dependencies including devDependencies for building
 RUN npm ci
 
-# Copy all files and build the Next.js app
-FROM install AS build
-
-COPY .. .
-
-# Disable Next.js telemetry during build
-ENV NEXT_TELEMETRY_DISABLED 1
-
-RUN npm run build
-
 # Prepare the release image
 FROM alpine:latest AS release
 
@@ -41,13 +31,17 @@ WORKDIR /usr/src/app
 # Copy production dependencies
 COPY --from=install /usr/src/app/node_modules ./node_modules
 
-# Copy built files
-COPY --from=build /usr/src/app/.next ./.next
-COPY --from=build /usr/src/app/public ./public
-COPY --from=build /usr/src/app/package.json ./package.json
+# Copy the application files
+COPY . .
+
+# Change ownership of the application files to the non-root user
+RUN chown -R appuser:appgroup /usr/src/app
 
 # Set environment variable
-ENV NODE_ENV=production
+ENV NODE_ENV=development
+
+# Disable Next.js telemetry during build
+ENV NEXT_TELEMETRY_DISABLED 1
 
 # Expose the application port
 EXPOSE 3000
@@ -56,5 +50,4 @@ EXPOSE 3000
 USER appuser
 
 # Command to run the Next.js application
-CMD ["npm", "start"]
-
+CMD ["npm", "run", "dev"]

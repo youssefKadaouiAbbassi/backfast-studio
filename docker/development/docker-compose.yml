@@ -1,0 +1,11 @@
+services:
+  nestui-frontend-dev:
+    build:
+      context: ../..
+      dockerfile: docker/development/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: "development"
+      NEXT_TELEMETRY_DISABLED: "1"
+    command: ["npm", "run", "dev"]
