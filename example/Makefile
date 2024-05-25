@@ -1,4 +1,7 @@
 include .env
+include .env.local
+
+export
 
 .PHONY: build
 build: ## Build the production docker image.
