@@ -58,4 +58,4 @@ make stop-prod
 Contributions are welcome! Please read our [Contributing Guidelines](link-to-guidelines) for more information.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details.
