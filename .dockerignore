@@ -1,6 +1,4 @@
 node_modules
-docker/development/Dockerfile
-docker/development/docker-compose.yml
 .dockerignore
 .git
 .gitignore
@@ -13,3 +11,5 @@ helm-charts
 .editorconfig
 .idea
 coverage*
+.next
+docker
