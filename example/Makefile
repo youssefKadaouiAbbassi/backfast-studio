@@ -1,3 +1,5 @@
+include .env
+
 .PHONY: build
 build: ## Build the production docker image.
 	docker compose -f docker-compose.yml build
