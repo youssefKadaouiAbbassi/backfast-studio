@@ -27,7 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
-examples/withDockerCompose/.env.local
+examples/withDockerCompose/.env*.local
 
 # vercel
 .vercel
