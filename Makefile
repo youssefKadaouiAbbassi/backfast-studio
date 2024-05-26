@@ -1,3 +1,7 @@
+.PHONY: gen-test-files
+gen-test-files: ## Generate test files.
+	./scripts/generateTestFiles.sh
+
 .PHONY: build-dev
 build-dev: ## Build the development docker image.
 	docker compose -f docker/development/docker-compose.yml build

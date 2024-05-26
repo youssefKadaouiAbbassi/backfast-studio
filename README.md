@@ -20,6 +20,11 @@
    cd nestui-studio
    ```
 
+## Generate test files
+```bash
+make gen-test-files
+```
+
 ## Development Setup
 
 ### Building the Development Docker Image
