@@ -8,4 +8,6 @@ services:
     environment:
       NODE_ENV: "development"
       NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - ../../.files:/usr/src/app/.files
     command: ["npm", "run", "dev"]
