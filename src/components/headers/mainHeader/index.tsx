@@ -1,3 +1,3 @@
 export default function MainHeader() {
-  return <></>;
+  return <div className="text-3xl">{'MainHeader'}</div>;
 }
