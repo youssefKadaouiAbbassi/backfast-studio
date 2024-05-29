@@ -8,8 +8,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: 'Nestui - Studio',
-  description: 'Nestui - Studio',
+  title: 'BackFast - Studio',
+  description: 'BackFast - Studio',
 };
 
 interface Props {
