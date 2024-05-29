@@ -4,7 +4,7 @@ export default async function Index() {
   return (
     <>
       <MainHeader />
-      <div className="text-3xl"> Test</div>
+      <div className="text-3xl">Test</div>
     </>
   );
 }
