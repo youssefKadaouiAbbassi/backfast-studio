@@ -1,5 +1,5 @@
 services:
-  nestui-studio:
+  studio:
     build:
       context: ../..
       dockerfile: docker/production/Dockerfile
@@ -8,4 +8,6 @@ services:
     environment:
       NODE_ENV: "production"
       NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - ../../.files:/usr/src/app/.files
     command: ["npm", "start"]

@@ -22,9 +22,6 @@ FROM alpine:latest AS release
 # Install Node.js and npm
 RUN apk add --no-cache nodejs npm
 
-# Create a non-root user and group
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-
 # Set the working directory
 WORKDIR /usr/src/app
 
@@ -34,9 +31,6 @@ COPY --from=install /usr/src/app/node_modules ./node_modules
 # Copy the application files
 COPY . .
 
-# Change ownership of the application files to the non-root user
-RUN chown -R appuser:appgroup /usr/src/app
-
 # Set environment variable
 ENV NODE_ENV=development
 
@@ -45,9 +39,6 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 # Expose the application port
 EXPOSE 3000
-
-# Use the non-root user to run the app
-USER appuser
 
 # Command to run the Next.js application
 CMD ["npm", "run", "dev"]

@@ -1,8 +1,8 @@
 
-<h1 align="center">NestUI Studio</h1>
+<h1 align="center">Backfast Studio</h1>
 
 ## Overview
-**NestUI Studio** is the repository for the Docker configuration of the of NestUI Studio. 
+**Backfast Studio** is the repository for the Docker configuration of the of backfast Studio. 
 
 
 ## Prerequisites
@@ -13,11 +13,11 @@
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone git@github.com:youssefKadaouiAbbassi/nestui-studio.git
+   git clone git@github.com:youssefKadaouiAbbassi/backfast-studio.git
    ```
 2. Change to the project directory:
    ```bash
-   cd nestui-studio
+   cd backfast-studio
    ```
 
 ## Development Setup

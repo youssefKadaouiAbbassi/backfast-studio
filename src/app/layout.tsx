@@ -8,8 +8,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: 'Next.js Starter Kit',
-  description: 'The fastest way to build apps with Next.js',
+  title: 'BackFast - Studio',
+  description: 'BackFast - Studio',
 };
 
 interface Props {
@@ -19,10 +19,8 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className="bg-background text-foreground">
-        <main className="min-h-screen flex flex-col items-center">
-          {children}
-        </main>
+      <body>
+        <main>{children}</main>
       </body>
     </html>
   );

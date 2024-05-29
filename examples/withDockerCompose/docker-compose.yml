@@ -1,6 +1,6 @@
 services:
-  nestui-studio-example:
-    image: youssefkadaouiabbassi/nestui-studio:${TAG}
+  studio-example:
+    image: youssefkadaouiabbassi/backfast-studio:${TAG}
     ports:
       - "4000:3000"
     environment:

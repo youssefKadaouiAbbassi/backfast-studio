@@ -5,12 +5,12 @@ export
 
 .PHONY: build
 build: ## Build the production docker image.
-	docker compose -f docker-compose.yml build
+	docker compose -p $(PROJECT_NAME) -f docker-compose.yml build
 
 .PHONY: start
 start: ## Start the production docker container.
-	docker compose -f docker-compose.yml up -d
+	docker compose -p $(PROJECT_NAME) -f docker-compose.yml up -d
 
 .PHONY: stop
 stop: ## Stop the production docker container.
-	docker compose -f docker-compose.yml down
+	docker compose -p $(PROJECT_NAME) -f docker-compose.yml down
